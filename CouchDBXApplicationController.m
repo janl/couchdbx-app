@@ -108,8 +108,10 @@
 
 -(void)openFuton
 {
+	NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+	NSString *homePage = [info objectForKey:@"HomePage"];
 	[webView setTextSizeMultiplier:1.3];
-	[[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://127.0.0.1:5984/_utils/"]]];
+	[[webView mainFrame] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:homePage]]];
 }
 
 -(IBAction)browse:(id)sender

@@ -19,6 +19,9 @@
 -(void)awakeFromNib
 {
     [browse setEnabled:NO];
+	NSLayoutManager *lm;
+	lm = [outputView layoutManager];
+	[lm setDelegate:self];
 	[self launchCouchDB];
 }
 
@@ -126,7 +129,6 @@
                                         encoding: NSUTF8StringEncoding];
     NSTextStorage *ts = [outputView textStorage];
     [ts replaceCharactersInRange:NSMakeRange([ts length], 0) withString:s];
-    [outputView scrollRangeToVisible:NSMakeRange([ts length], 0)];
     [s release];
 }
 
@@ -139,6 +141,14 @@
     }
     if (task)
       [[out fileHandleForReading] readInBackgroundAndNotify];
+}
+
+- (void)layoutManager:(NSLayoutManager *)aLayoutManager didCompleteLayoutForTextContainer:(NSTextContainer *)aTextContainer atEnd:(BOOL)flag
+{
+	if (flag) {
+		NSTextStorage *ts = [outputView textStorage];
+		[outputView scrollRangeToVisible:NSMakeRange([ts length], 0)];
+	}
 }
 
 @end

@@ -19,9 +19,13 @@
 -(void)awakeFromNib
 {
     [browse setEnabled:NO];
+	
 	NSLayoutManager *lm;
 	lm = [outputView layoutManager];
 	[lm setDelegate:self];
+	
+	[webView setUIDelegate:self];
+	
 	[self launchCouchDB];
 }
 
@@ -149,6 +153,58 @@
 		NSTextStorage *ts = [outputView textStorage];
 		[outputView scrollRangeToVisible:NSMakeRange([ts length], 0)];
 	}
+}
+
+- (void)webView:(WebView *)sender runOpenPanelForFileButtonWithResultListener:(id < WebOpenPanelResultListener >)resultListener
+{
+	[self openChooseFileDialogWithListener: resultListener
+			allowMultipleFiles: FALSE];
+}
+- (void)webView:(WebView *)sender runOpenPanelForFileButtonWithResultListener:(id < WebOpenPanelResultListener >)resultListener allowMultipleFiles:(BOOL)allowMultipleFiles
+{
+	[self openChooseFileDialogWithListener: resultListener
+			allowMultipleFiles: allowMultipleFiles];
+}
+
+#if __MAC_OS_X_VERSION_MAX_ALLOWED >= 1060 
+	#define MULTIPLE_SELECTION_POSSIBLE TRUE
+#else
+	#define MULTIPLE_SELECTION_POSSIBLE FALSE
+#endif
+- (void)openChooseFileDialogWithListener: (id < WebOpenPanelResultListener >)resultListener allowMultipleFiles: (BOOL)multipleSelection
+{
+	NSOpenPanel* openDlg = [NSOpenPanel openPanel];
+	[openDlg setCanChooseFiles:YES];
+	[openDlg setCanChooseDirectories:NO];
+	[openDlg setAllowsMultipleSelection: (multipleSelection && MULTIPLE_SELECTION_POSSIBLE)];
+	NSInteger result = [openDlg runModal];
+	if (result == NSFileHandlingPanelOKButton) {
+		NSArray* files = [openDlg URLs];
+#if MULTIPLE_SELECTION_POSSIBLE
+		NSInteger filesNumber = [files count];
+		if (filesNumber == 1) {
+#endif
+			NSURL* fileURL = [files objectAtIndex:0];
+			NSString* path = [fileURL path];
+			[resultListener chooseFilename:path ];
+#if MULTIPLE_SELECTION_POSSIBLE			
+		} else {
+			NSMutableArray* fileNames = [NSMutableArray arrayWithCapacity:filesNumber];
+			for (NSURL* fileURL in files) {
+				NSString* path = [fileURL path];
+				[fileNames addObject:path];
+			}
+			[resultListener chooseFilenames: fileNames];
+		} 
+#endif		
+	} else {
+		[resultListener cancel];
+	}
+}
+
+- (void)webView:(WebView *)sender runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WebFrame *)frame
+{
+	NSRunInformationalAlertPanel(nil, message, nil, nil, nil);
 }
 
 @end

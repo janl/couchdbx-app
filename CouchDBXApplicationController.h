@@ -23,5 +23,6 @@
 -(void)taskTerminated:(NSNotification *)note;
 -(void)cleanup;
 -(void)openFuton;
+-(void)openChooseFileDialogWithListener: (id < WebOpenPanelResultListener >)resultListener allowMultipleFiles: (BOOL)multipleSelection;
 
 @end

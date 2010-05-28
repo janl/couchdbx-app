@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>HomePage</key>
-	<string>http://couchio.local:5984/</string>
+	<string>http://127.0.0.1:5984/_utils</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>

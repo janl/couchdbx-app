@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SUPublicDSAKeyFile</key>
+	<string>dsa_pub.pem</string>
+	<key>SUFeedURL</key>
+	<string>http://couchdbx.couchone.com/couchdbx/_design/appcast/_rewrite/cast</string>
 	<key>HomePage</key>
 	<string>http://127.0.0.1:5984/_utils</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -11,7 +15,7 @@
 	<key>CFBundleIconFile</key>
 	<string>CouchDb.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>de.prima.jan.CouchDBX</string>
+	<string>com.couchone.couchdbx</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,7 +25,7 @@
 	<key>CFBundleSignature</key>
 	<string>jlcd</string>
 	<key>CFBundleVersion</key>
-	<string>0.11.0</string>
+	<string>1.0.0</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>

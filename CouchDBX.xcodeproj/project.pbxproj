@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D11681B120EF082001DC2AE /* SUUpdaterDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D11681A120EF082001DC2AE /* SUUpdaterDelegate.m */; };
+		3D116835120EFE7D001DC2AE /* ensure_full_commit.sh in Resources */ = {isa = PBXBuildFile; fileRef = 3D116834120EFE7D001DC2AE /* ensure_full_commit.sh */; };
 		3DC028EA0E199454004977D9 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC028E60E199454004977D9 /* stop.png */; };
 		3DC028EB0E199454004977D9 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC028E70E199454004977D9 /* pause.png */; };
 		3DC028F30E19960A004977D9 /* CouchDBXApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DC028F20E19960A004977D9 /* CouchDBXApplicationController.m */; };
 		3DDFD6EA0E1A43FC005113C0 /* CouchDb.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3DDFD6E90E1A43FC005113C0 /* CouchDb.icns */; };
+		3DF6EC0611EC7126000AD45B /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF6EC0511EC7126000AD45B /* Sparkle.framework */; };
+		3DF6EC1211EC714C000AD45B /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DF6EC0511EC7126000AD45B /* Sparkle.framework */; };
+		3DF6EC7411EDCC96000AD45B /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 3DF6EC7311EDCC96000AD45B /* dsa_pub.pem */; };
 		755FCD070E78BF0100F175AD /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 755FCD060E78BF0100F175AD /* WebKit.framework */; };
 		755FCDE90E78DCD000F175AD /* browse.png in Resources */ = {isa = PBXBuildFile; fileRef = 755FCDE80E78DCD000F175AD /* browse.png */; };
 		755FCDEB0E78DCD900F175AD /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = 755FCDEA0E78DCD900F175AD /* start.png */; };
@@ -20,6 +25,19 @@
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		3DF6EC2011EC7161000AD45B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3DF6EC1211EC714C000AD45B /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
@@ -28,11 +46,16 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* CouchDBX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchDBX_Prefix.pch; sourceTree = "<group>"; };
+		3D116819120EF082001DC2AE /* SUUpdaterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SUUpdaterDelegate.h; sourceTree = "<group>"; };
+		3D11681A120EF082001DC2AE /* SUUpdaterDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SUUpdaterDelegate.m; sourceTree = "<group>"; };
+		3D116834120EFE7D001DC2AE /* ensure_full_commit.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ensure_full_commit.sh; sourceTree = "<group>"; };
 		3DC028E60E199454004977D9 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		3DC028E70E199454004977D9 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		3DC028F10E19960A004977D9 /* CouchDBXApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CouchDBXApplicationController.h; sourceTree = "<group>"; };
 		3DC028F20E19960A004977D9 /* CouchDBXApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CouchDBXApplicationController.m; sourceTree = "<group>"; };
 		3DDFD6E90E1A43FC005113C0 /* CouchDb.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CouchDb.icns; sourceTree = "<group>"; };
+		3DF6EC0511EC7126000AD45B /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		3DF6EC7311EDCC96000AD45B /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		755FCD060E78BF0100F175AD /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = /System/Library/Frameworks/WebKit.framework; sourceTree = "<absolute>"; };
 		755FCDE80E78DCD000F175AD /* browse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = browse.png; sourceTree = "<group>"; };
 		755FCDEA0E78DCD900F175AD /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
@@ -47,6 +70,7 @@
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				755FCD070E78BF0100F175AD /* WebKit.framework in Frameworks */,
+				3DF6EC0611EC7126000AD45B /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +80,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3D116819120EF082001DC2AE /* SUUpdaterDelegate.h */,
+				3D11681A120EF082001DC2AE /* SUUpdaterDelegate.m */,
 				3DC028F10E19960A004977D9 /* CouchDBXApplicationController.h */,
 				3DC028F20E19960A004977D9 /* CouchDBXApplicationController.m */,
 			);
@@ -65,6 +91,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DF6EC0511EC7126000AD45B /* Sparkle.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -91,6 +118,7 @@
 		29B97314FDCFA39411CA2CEA /* CouchDBX */ = {
 			isa = PBXGroup;
 			children = (
+				3DF6EC7311EDCC96000AD45B /* dsa_pub.pem */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -112,6 +140,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3D116834120EFE7D001DC2AE /* ensure_full_commit.sh */,
 				755FCDEA0E78DCD900F175AD /* start.png */,
 				755FCDE80E78DCD000F175AD /* browse.png */,
 				3DDFD6E90E1A43FC005113C0 /* CouchDb.icns */,
@@ -143,7 +172,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
-				3DD5296C1085324500A3C46C /* ShellScript */,
+				3DF6EC2011EC7161000AD45B /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -184,26 +213,12 @@
 				3DDFD6EA0E1A43FC005113C0 /* CouchDb.icns in Resources */,
 				755FCDE90E78DCD000F175AD /* browse.png in Resources */,
 				755FCDEB0E78DCD900F175AD /* start.png in Resources */,
+				3DF6EC7411EDCC96000AD45B /* dsa_pub.pem in Resources */,
+				3D116835120EFE7D001DC2AE /* ensure_full_commit.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3DD5296C1085324500A3C46C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/sh -e\ncp -r ../couchdbx-builder/couchdbx-core";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8D11072C0486CEB800E47090 /* Sources */ = {
@@ -212,6 +227,7 @@
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				3DC028F30E19960A004977D9 /* CouchDBXApplicationController.m in Sources */,
+				3D11681B120EF082001DC2AE /* SUUpdaterDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +257,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
@@ -273,6 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CouchDBX_Prefix.pch;

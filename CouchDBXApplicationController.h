@@ -24,5 +24,7 @@
 -(void)cleanup;
 -(void)openFuton;
 -(void)openChooseFileDialogWithListener: (id < WebOpenPanelResultListener >)resultListener allowMultipleFiles: (BOOL)multipleSelection;
+-(void)ensureFullCommit;
+-(NSString *)applicationSupportFolder;
 
 @end
